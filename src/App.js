@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import Button from "./Button";
 
+const data = [
+   { id: 0, text: "Hello World" },
+   { id: 1, text: "Hello Galaxy" },
+   { id: 2, text: "Hello Universe" },
+];
+
 function App() {
    const initialCount = 40;
    const [count, setCount] = useState(initialCount);
 
    return (
       <div>
-         <Heading message="Hello World" />
-         <Heading message="Hello Universe!" />
+         {data.map((item) => (
+            <Heading key={item.id} message={item.text} />
+         ))}
 
          <p>Current count: {count}</p>
          <button onClick={() => setCount(count + 1)}>Increment</button>
