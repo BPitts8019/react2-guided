@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Heading from "./Heading";
+import Button from "./Button";
 
 function App() {
    const initialCount = 40;
@@ -9,10 +10,11 @@ function App() {
       <div>
          <Heading message="Hello World" />
          <Heading message="Hello Universe!" />
+
          <p>Current count: {count}</p>
          <button onClick={() => setCount(count + 1)}>Increment</button>
          <button onClick={() => setCount(count - 1)}>Decrement</button>
-         <button onClick={() => setCount(initialCount)}>Reset</button>
+         <Button label="Reset" cb={() => setCount(initialCount)} />
 
          {count === 42 && (
             <p>
