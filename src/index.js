@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
-function Heading() {
-   // const header = document.createElement("h1");
-   // header.textContent = "Hello World!";
-
-   // return header;
-   // return React.createElement("h1", null, "Hello World!");
-   return <h1>Hello World!</h1>;
-}
+import Heading from "./Heading";
 
 function App() {
    const initialCount = 40;
